@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        //Создание объекта Post
+        let Post = function (author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        //Добавление функции edit
+        Post.prototype.edit = function edit(text) {
+            this.text = text;
+        }
+
+        let result = new Post("Alex", "hello world!", new Date());
+        result.edit("Привет мир!");
+        console.log(result);
+
+        //Создание объекта который принимает аргументы от объекта Post 
+        let AttachedPost = function () {
+            Post.apply(this, arguments);
+            this.highlighted = false;
+        }
+        //Добавление в прототип функции makeTextHighlighted
+        AttachedPost.prototype.makeTextHighlighted = function () {
+            this.highlighted = true;
+        }
+
+
+        let text = new AttachedPost("Alex", "hello world!", new Date());
+        text.makeTextHighlighted();
+        console.log(text);
+    </script>
+</body>
+
+</html>

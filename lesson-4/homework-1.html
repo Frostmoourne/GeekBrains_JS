@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        class DecomposeNumber {
+            constructor(num) {
+                // Проверка значение на число, на вхождение числа в границу от 0 до 999
+                if ((num > 0 && num < 1000) && (num != undefined && num != null) && (Number.isInteger(num) ===
+                    true)) {
+                    this.units = num % 10;
+                    num = Math.floor(num / 10);
+                    this.tens = num % 10;
+                    num = Math.floor(num / 10);
+                    this.hundreds = num;
+                }
+                // при неверных входных данных сообщение о ошибке и создание пустого объекта
+                else {
+                    console.log('Введено некорректное число');
+                    return {};
+                }
+
+            }
+        }
+        const number = new DecomposeNumber(989);
+        console.log(number);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Product = function (name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Product.prototype.make25PercentDiscount = function () {
+            this.price = (this.price * 0.85);
+        }
+
+
+        let product = new Product("ferrari", 1000);
+        product.make25PercentDiscount();
+        console.log(product);
+    </script>
+</body>
+
+</html>
