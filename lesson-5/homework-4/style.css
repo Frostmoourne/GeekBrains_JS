@@ -1,0 +1,8 @@
+.product {
+    float: left;
+    width: 150px;
+}
+
+.hidden {
+    display: none;
+}

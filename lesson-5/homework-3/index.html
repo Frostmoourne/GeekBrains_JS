@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="button">Кнопка</button>
+        <div class="window hidden">
+            <button class="closeButton">Закрыть</button>
+        </div>
+    </div>
+    <script>
+        let closeButtonEl = document.querySelector(".closeButton");
+        let buttonEl = document.querySelector(".button");
+        let windowEl = document.querySelector(".window");
+
+        buttonEl.addEventListener('click', function () {
+            //Если повторное открытие окна, то удаление анимации на закрытие окна
+            windowEl.classList.remove("swirl-out-bck");
+            //Добавление класса анимации на появление окна
+            windowEl.classList.add("swirl-in-fwd");
+            //Удаление класса скрытия модального окна
+            windowEl.classList.remove("hidden");
+        });
+
+        closeButtonEl.addEventListener('click', function () {
+            //Удаление класса анимации открытия модального окна
+            windowEl.classList.remove("swirl-in-fwd");
+            //Добавление класса анимации на закрытие окна
+            windowEl.classList.add("swirl-out-bck");
+            // Таймер для выполнения анимации закрытия окна
+            setTimeout(function() {
+                windowEl.classList.add("hidden");
+            }, 600);
+        });
+    </script>
+</body>
+
+</html>
