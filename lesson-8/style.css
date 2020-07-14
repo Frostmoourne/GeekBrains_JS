@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.timer-display {
+    font-size: 30px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.timer {
+    border: 1px solid black;
+    display: table;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+
+.timer i {
+    margin: 20px;
+    float: left;
+}
+
+.timer p {
+
+    margin: 12px;
+    float: left;
+    text-align: center;
+}
+
+.timer-btn {
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timer-btn-start {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.timer-btn-start:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+    a.button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+.timer-btn-pause {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.timer-btn-pause:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.time-display {
+    font-size: 30px;
+
+
+}
